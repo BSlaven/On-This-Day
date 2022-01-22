@@ -8,8 +8,10 @@ function App() {
   return (
     <div className="App">
       <h2 className="main-header">Select Date</h2>
-      <People />
-      <Events />
+      <div className="container">
+        <People />
+        <Events />
+      </div>
     </div>
   )
 }
