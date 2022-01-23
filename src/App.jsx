@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h2 className="main-header">Select Date</h2>
       <div className="container">
-        {/* <People /> */}
+        <People />
         <Events />
       </div>
     </div>
