@@ -1,7 +1,7 @@
 import './App.css'
 
-import People from './components/People';
-import Events from './components/Events';
+import People from './components/People/People';
+import Events from './components/Events/Events';
 
 function App() {
 

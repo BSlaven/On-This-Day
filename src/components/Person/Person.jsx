@@ -4,7 +4,7 @@ const Person = () => {
   return (
     <div className={classes.card}>
       <h4 className={classes.name}>Slaven Bunijevac</h4>
-      <p className={classes.description}>Amazing developer and tranlator</p>
+      <p className={classes.description}>Amazing developer and translator</p>
       <button className={classes.more}>Learn more</button>
     </div>
   );
