@@ -5,7 +5,7 @@ const Person = () => {
     <div className={classes.card}>
       <h4 className={classes.name}>Slaven Bunijevac</h4>
       <p className={classes.description}>Amazing developer and translator</p>
-      <button className={classes.more}>Learn more</button>
+      <a className={classes.more}>Learn more...</a>
     </div>
   );
 };
