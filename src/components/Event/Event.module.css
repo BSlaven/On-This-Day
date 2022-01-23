@@ -18,6 +18,11 @@
 
 .more {
   font-size: 0.9rem;
-  color: #fff;
+  color: rgb(183, 235, 41);
   text-decoration: none;
+}
+
+.more:is(:hover, :focus) {
+  color: rgb(127, 173, 0);
+  text-decoration: underline;
 }
