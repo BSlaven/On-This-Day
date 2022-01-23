@@ -1,0 +1,23 @@
+.card {
+  background-color: rgb(7, 7, 46);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.year {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.more {
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+}

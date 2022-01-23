@@ -1,9 +1,12 @@
-import React from 'react';
+import classes from './Events.module.css';
+import Event from '../Event/Event';
 
 const Events = () => {
   return (
-    <div>
-      <h3>This is Events component.</h3>
+    <div className={classes.events}>
+      <Event />
+      <Event />
+      <Event />
     </div>
   )
 };
