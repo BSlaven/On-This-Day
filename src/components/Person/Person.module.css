@@ -17,9 +17,11 @@
 }
 
 .more {
-  background-color: rgb(221, 183, 15);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  font-size: 1rem;
+  color: rgb(221, 183, 15);
+  font-size: 0.9rem;
+}
+
+.more:is(:hover, :focus) {
+  color: rgb(177, 147, 13);
+  border-bottom: 1px solid rgb(177, 147, 13);
 }
