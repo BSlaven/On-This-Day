@@ -14,7 +14,8 @@
 }
 
 .form div label {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .form div input {
@@ -24,7 +25,18 @@
   padding: 0.2rem;
 }
 
+.form div input:is(:focus) {
+  outline: 3px solid green;
+}
+
 .form button {
   border: none;
-  padding: 0.5em 1rem;
+  padding: 0.3em 0.7rem;
+  border-radius: 2px;
+  background-color: green;
+  color: #fff;
+}
+
+.form button:is(:hover, :focus) {
+  background-color: rgb(0, 87, 0);
 }
