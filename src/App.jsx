@@ -10,7 +10,7 @@ function App() {
       <h2 className="main-header">Select Date</h2>
       <div className="container">
         <People />
-        <Events />
+        {/* <Events /> */}
       </div>
     </div>
   )

@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+  /* border: 1px solid yellow; */
+  justify-content: space-between;
+}
+
+.form > div {
+  display: flex;
+  max-width: 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form div label {
+  margin-right: 1rem;
+}
+
+.form div input {
+  max-width: 3rem;
+  border: none;
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+
+.form button {
+  border: none;
+  padding: 0.5em 1rem;
+}
