@@ -6,7 +6,7 @@ const People = () => {
 
   return (
     <div className={classes.people}>
-      <DateForm />
+      <DateForm section='births' />
       <Person />
       <Person />
       <Person />
