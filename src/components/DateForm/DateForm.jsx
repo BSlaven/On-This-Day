@@ -20,7 +20,7 @@ const DateForm = ({ section, getPeople }) => {
   const fetchBirths = async () => {
     const res = await fetch(`https://byabbe.se/on-this-day/${month}/${day}/${section}.json`);
     const data = await res.json();
-    console.log(data);
+    getPeople(data);
   }
 
   const btnClickHandler = () => {

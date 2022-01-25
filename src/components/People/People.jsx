@@ -6,18 +6,21 @@ import classes from './People.module.css';
 
 const People = () => {
 
-  const [people, setPeople] = useState([]);
+  const [peopleData, setPeopleData] = useState([]);
+  const [currentDate, setCurrentDate] = useState('');
 
   const listAllPeople = persons => {
-    setPeople(persons);
+    console.log(persons.births);
+    setPeopleData(persons.births);
+    setCurrentDate(persons.date);
   }
 
   return (
     <div className={classes.people}>
+      <h3 className={classes.peopleTitle}>People born on this date</h3>
+      <h4 className={classes.date}>({currentDate})</h4>
       <DateForm section='births' getPeople={listAllPeople} />
-      <Person />
-      <Person />
-      <Person />
+      {peopleData && peopleData.map(person => <Person key={person.description} person={person} />)}
     </div>
   );
 };
