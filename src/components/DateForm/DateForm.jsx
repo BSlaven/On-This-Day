@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import classes from './DateForm.module.css';
 
-const DateForm = ({ section }) => {
+const DateForm = ({ section, getPeople }) => {
 
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
