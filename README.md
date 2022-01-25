@@ -1,4 +1,4 @@
-# On This Day
+# On This Day [Live Demo](https://on-this-day.netlify.app/)
 
 ## Simple app to select a date and see people born on that day or events that happened on that day.
 
