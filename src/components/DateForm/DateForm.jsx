@@ -17,15 +17,22 @@ const DateForm = ({ section, getData }) => {
     setMonth(value);
   }
 
-  const fetchData = async () => {
+  const fetchData = async (day, month) => {
     const res = await fetch(`https://byabbe.se/on-this-day/${month}/${day}/${section}.json`);
     const data = await res.json();
     getData(data);
   }
 
   const btnClickHandler = () => {
-    fetchData();
+    fetchData(day, month);
   }
+
+  useEffect(() => {
+    const newDate = new Date();
+    const initDay = newDate.getDate();
+    const initMonth = newDate.getMonth() + 1;
+    fetchData(initDay, initMonth);
+  }, [])
 
   return (
     <div className={classes.form}>
