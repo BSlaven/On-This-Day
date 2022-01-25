@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import classes from './DateForm.module.css';
 
-const DateForm = ({ section, getPeople }) => {
+const DateForm = ({ section, getData }) => {
 
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
@@ -17,16 +17,14 @@ const DateForm = ({ section, getPeople }) => {
     setMonth(value);
   }
 
-  const fetchBirths = async () => {
+  const fetchData = async () => {
     const res = await fetch(`https://byabbe.se/on-this-day/${month}/${day}/${section}.json`);
     const data = await res.json();
-    getPeople(data);
+    getData(data);
   }
 
   const btnClickHandler = () => {
-    console.log('day: ', day);
-    console.log('month: ', month);
-    fetchBirths();
+    fetchData();
   }
 
   return (
