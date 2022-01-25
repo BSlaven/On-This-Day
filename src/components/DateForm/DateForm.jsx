@@ -19,6 +19,7 @@ const DateForm = ({ section, getData }) => {
 
   const fetchData = async (day, month) => {
     const res = await fetch(`https://byabbe.se/on-this-day/${month}/${day}/${section}.json`);
+    // const res = await fetch(`https://byabbe.se/on-this-day/1/1/events.json`);
     const data = await res.json();
     getData(data);
   }
@@ -29,8 +30,8 @@ const DateForm = ({ section, getData }) => {
 
   useEffect(() => {
     const newDate = new Date();
-    const initDay = newDate.getDate();
-    const initMonth = newDate.getMonth() + 1;
+    const initDay = String(newDate.getDate());
+    const initMonth = String(newDate.getMonth() + 1);
     fetchData(initDay, initMonth);
   }, [])
 

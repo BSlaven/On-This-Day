@@ -2,7 +2,7 @@ import classes from './Event.module.css';
 
 const Event = ({ event }) => {
 
-  const link = event.wikipedia[0].wikipedia;
+  const link = event.wikipedia[0]?.wikipedia;
 
   return (
     <div className={classes.card}>
