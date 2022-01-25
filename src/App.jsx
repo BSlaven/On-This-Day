@@ -7,10 +7,10 @@ function App() {
 
   return (
     <div className="App">
-      <h2 className="main-header">Select Date</h2>
+      <h2 className="main-header">On This Day</h2>
       <div className="container">
         <People />
-        {/* <Events /> */}
+        <Events />
       </div>
     </div>
   )

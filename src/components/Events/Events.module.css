@@ -1,6 +1,19 @@
 .events {
   padding: 1rem;
-  flex-grow: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.eventsTitle {
+  font-size: 1.6rem;
+  font-weight: normal;
+
+}
+
+.date {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  color: rgb(221, 183, 15);
 }
