@@ -8,7 +8,13 @@ const Event = ({ event }) => {
     <div className={classes.card}>
       <h4 className={classes.year}>{event.year}</h4>
       <p className={classes.description}>{event.description}</p>
-      <a href={link} target='_blank' className={classes.more}>Learn more...</a>
+      <a
+        href={link}
+        target='_blank'
+        rel="noopener noreferrer nofollow"
+        className={classes.more}>
+        Learn more...
+      </a>
     </div>
   );
 };

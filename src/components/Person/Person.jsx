@@ -8,7 +8,13 @@ const Person = ({ person }) => {
     <div className={classes.card}>
       <h4 className={classes.name}>{person.year}</h4>
       <p className={classes.description}>{person.description}</p>
-      <a href={link} target='_blank' className={classes.more}>Learn more...</a>
+      <a
+        href={link}
+        target='_blank'
+        rel="noopener noreferrer nofollow"
+        className={classes.more}>
+        Learn more...
+      </a>
     </div>
   );
 };
