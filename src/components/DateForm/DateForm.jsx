@@ -9,13 +9,13 @@ const DateForm = ({ section, getData }) => {
 
   const dayInputHandler = e => {
     const value = e.target.value.trim();
-    if (parseInt(value) < 1) return setDay(1);
+    if (parseInt(value) < 1 || parseInt(value) > 31) return;
     setDay(value);
   }
 
   const monthInputHandler = e => {
     const value = e.target.value.trim();
-    if (parseInt(value) < 1) return setMonth(1);
+    if (parseInt(value) < 1 || parseInt(value) > 12) return;
     setMonth(value);
   }
 
