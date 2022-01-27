@@ -1,13 +1,16 @@
 .loadBtn {
-  background-color: rgb(0, 125, 134);
+  background-color: rgb(7, 87, 0);
   color: #fff;
   font-size: 1.2rem;
   max-width: 150px;
   border: none;
   border-radius: 3px;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .loadBtn:is(:hover, :focus) {
-  
+  background-color: rgb(0, 54, 7); 
+  outline: 2px solid #fff;
+  outline-offset: -2px;
 }
