@@ -7,9 +7,11 @@ import classes from './People.module.css';
 
 const People = () => {
 
-  const [peopleData, setPeopleData] = useState([]);
-  const [currentDate, setCurrentDate] = useState('');
-  const [ showLimit, setShowLimit ] = useState(2);
+  const [ peopleData, setPeopleData ] = useState([]);
+  const [ currentDate, setCurrentDate ] = useState('');
+  const [ showLimit, setShowLimit ] = useState(10);
+  
+  const peopleToShow = peopleData.slice(0, showLimit);
 
   const listAllPeople = persons => {
     setPeopleData(persons.births);
@@ -17,10 +19,8 @@ const People = () => {
   }
 
   const loadMorePeople = () => {
-    setShowLimit(prev => prev + 10 );
+    setShowLimit(prev => prev + 10);
   }
-
-  const peopleToShow = peopleData.slice(0, showLimit);
 
   return (
     <div className={classes.people}>
