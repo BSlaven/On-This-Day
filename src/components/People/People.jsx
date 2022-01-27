@@ -9,7 +9,7 @@ const People = () => {
 
   const [peopleData, setPeopleData] = useState([]);
   const [currentDate, setCurrentDate] = useState('');
-  const [ showLimit, setShowLimit ] = useState(5);
+  const [ showLimit, setShowLimit ] = useState(2);
 
   const listAllPeople = persons => {
     setPeopleData(persons.births);
