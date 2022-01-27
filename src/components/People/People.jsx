@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import DateForm from '../DateForm/DateForm';
 import Person from '../Person/Person';
 import classes from './People.module.css';
@@ -15,6 +16,10 @@ const People = () => {
     setCurrentDate(persons.date);
   }
 
+  const loadMorePeople = () => {
+    setShowLimit(prev => prev + 10 );
+  }
+
   const peopleToShow = peopleData.slice(0, showLimit);
 
   return (
@@ -23,6 +28,7 @@ const People = () => {
       <h4 className={classes.date}>({currentDate})</h4>
       <DateForm section='births' getData={listAllPeople} />
       {peopleData && peopleToShow.map(person => <Person key={person.description} person={person} />)}
+      {peopleData.length > peopleToShow.length && <LoadMoreBtn loadMore={loadMorePeople} />}
     </div>
   );
 };
