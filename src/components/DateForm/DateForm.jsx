@@ -9,7 +9,9 @@ const DateForm = ({ section, getData }) => {
 
   const dayInputHandler = e => {
     const value = e.target.value.trim();
-    if (parseInt(value) < 1 || parseInt(value) > 31) return;
+    if(parseInt(value) < 1 || parseInt(value) > 31) return;
+    if(month == 2 && parseInt(value) > 29) return;
+    if((month == 6 || month == 4 || month == 9 || month == 11) && parseInt(value) > 30) return;
     setDay(value);
   }
 
