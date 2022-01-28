@@ -1,10 +1,14 @@
-import React from 'react';
+import { BiUpArrowAlt } from 'react-icons/bi';
+import classes from './ToTopBtn.module.css';
 
 const ToTopBtn = () => {
+
+  const backToTop = () => {
+    
+  }
+  
   return (
-    <div>
-      button
-    </div>
+    <BiUpArrowAlt className={classes.icon} onClick={backToTop} />
   );
 };
 
