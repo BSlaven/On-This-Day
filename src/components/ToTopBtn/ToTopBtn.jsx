@@ -1,14 +1,17 @@
 import { BiUpArrowAlt } from 'react-icons/bi';
 import classes from './ToTopBtn.module.css';
 
-const ToTopBtn = () => {
+const ToTopBtn = ({ showButton }) => {
 
   const backToTop = () => {
-    
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   
   return (
-    <BiUpArrowAlt className={classes.icon} onClick={backToTop} />
+    <BiUpArrowAlt
+      style={!showButton ? {display: 'none'} : {}}
+      className={classes.icon}
+      onClick={backToTop} />
   );
 };
 
