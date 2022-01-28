@@ -4,21 +4,18 @@ import classes from './DateForm.module.css';
 
 const DateForm = ({ section, getData }) => {
 
-  const [day, setDay] = useState('');
-  const [month, setMonth] = useState('');
+  const [ day, setDay ] = useState('');
+  const [ month, setMonth ] = useState('');
+  const [ date, setDate ] = useState('');
 
   const dayInputHandler = e => {
-    const value = e.target.value.trim();
-    if(parseInt(value) < 1 || parseInt(value) > 31) return;
-    if(month == 2 && parseInt(value) > 29) return;
-    if((month == 6 || month == 4 || month == 9 || month == 11) && parseInt(value) > 30) return;
-    setDay(value);
-  }
-
-  const monthInputHandler = e => {
-    const value = e.target.value.trim();
-    if (parseInt(value) < 1 || parseInt(value) > 12) return;
-    setMonth(value);
+    const value = e.target.value;
+    setDate(value);
+    const myDate = new Date(value);
+    const myDay = myDate.getDate();
+    const myMonth = myDate.getMonth() + 1;
+    setDay(myDay);
+    setMonth(myMonth);
   }
 
   const fetchData = async (day, month) => {
@@ -40,23 +37,14 @@ const DateForm = ({ section, getData }) => {
 
   return (
     <div className={classes.form}>
-      <div>
-        <label htmlFor="day-input">Day</label>
+      <div className={classes.date}>
+        <label htmlFor="day-input">Date</label>
         <input
-          value={day || ''}
-          onChange={dayInputHandler}
-          type="number"
+          value={date || ''}
+          onInput={dayInputHandler}
+          type="date"
           name="day-input"
           id="day-input" />
-      </div>
-      <div>
-        <label htmlFor="month-input">Month</label>
-        <input
-          value={month || ''}
-          onChange={monthInputHandler}
-          type="number"
-          name="month-input"
-          id="month-input" />
       </div>
       <button onClick={btnClickHandler}>fetch</button>
     </div>
