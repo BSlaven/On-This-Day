@@ -9,9 +9,10 @@ const DateForm = ({ section, getData }) => {
 
   const dayInputHandler = e => {
     const value = e.target.value.trim();
-    if(parseInt(value) < 1 || parseInt(value) > 31) return;
-    if(month == 2 && parseInt(value) > 29) return;
-    if((month == 6 || month == 4 || month == 9 || month == 11) && parseInt(value) > 30) return;
+    console.log(value);
+    // if(parseInt(value) < 1 || parseInt(value) > 31) return;
+    // if(month == 2 && parseInt(value) > 29) return;
+    // if((month == 6 || month == 4 || month == 9 || month == 11) && parseInt(value) > 30) return;
     setDay(value);
   }
 
@@ -40,23 +41,14 @@ const DateForm = ({ section, getData }) => {
 
   return (
     <div className={classes.form}>
-      <div>
-        <label htmlFor="day-input">Day</label>
+      <div className={classes.date}>
+        <label htmlFor="day-input">Date</label>
         <input
           value={day || ''}
           onChange={dayInputHandler}
-          type="number"
+          type="date"
           name="day-input"
           id="day-input" />
-      </div>
-      <div>
-        <label htmlFor="month-input">Month</label>
-        <input
-          value={month || ''}
-          onChange={monthInputHandler}
-          type="number"
-          name="month-input"
-          id="month-input" />
       </div>
       <button onClick={btnClickHandler}>fetch</button>
     </div>
