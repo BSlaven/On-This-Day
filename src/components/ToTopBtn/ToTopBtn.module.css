@@ -1,0 +1,9 @@
+.icon {
+  background: rgba(15, 0, 155, 0.5);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  opacity: 0.8;
+}
